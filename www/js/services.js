@@ -29,7 +29,15 @@ angular.module('starter.services', [])
     name: 'Mike Harrington',
     lastText: 'This is wicked good ice cream.',
     face: 'img/mike.png'
-  }];
+  },
+{
+  id: 5,
+    name: 'Test user',
+    lastText: 'test user!',
+    face: 'img/perry.png'
+  }
+
+  ];
 
   return {
     all: function() {
