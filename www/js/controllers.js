@@ -10,6 +10,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('PostsCtrl', function($scope, $stateParams, Posts){
+  $scope.post = Posts.get($stateParams.postId)
+})
+
 .controller('SearchCtrl', function($scope) {
 // controller logic here
 

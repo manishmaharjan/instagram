@@ -94,6 +94,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
        }
      })
 
+    .state('tab.home-posts', {
+      url:'/posts/:postId',
+      views:{
+        'tab-posts':{
+          templateUrl: 'templates/home-posts.html',
+          controller: 'PostsCtrl'
+        }
+      }
+    })
+
       .state('tab.search',{
       url: '/search',
       views: {

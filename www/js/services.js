@@ -1,6 +1,7 @@
-angular.module('starter.services', [])
+//angular.module('starter.services', [])
+var insta = angular.module('starter.services', []);
 
-.factory('Chats', function() {
+insta.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -56,3 +57,31 @@ angular.module('starter.services', [])
     }
   };
 });
+
+
+ insta.factory('Posts', function(){
+    var posts = [{
+      id:0,
+      name: "John Doe",
+      lastText: 'first post',
+      face: 'img/ben.png'
+    },{
+      id:1,
+      name: 'Kari Leitonen',
+      lastText:'second post',
+      face:'img/adam.jpg'
+    }];
+    return {
+      all: function(){
+        return posts;
+      },
+      get:function(postId) {
+        for (var i=0; i < posts.length; i++) {
+          if(posts[i].id === parseInt(postId)){
+            return posts[i];
+          }
+        }
+        return null;
+      }
+    };
+  });
