@@ -5,13 +5,16 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('HomeCtrl', function($scope) {
+.controller('HomeCtrl', function($scope, Posts) {
 // controller logic here
-
+$scope.postsctrlscope = Posts.all();
+// $scope.remove = function(post){
+//   Posts.remove(post);
+// };
 })
 
 .controller('PostsCtrl', function($scope, $stateParams, Posts){
-  $scope.post = Posts.get($stateParams.postId)
+  $scope.postscope = Posts.get($stateParams.postId);
 })
 
 .controller('SearchCtrl', function($scope) {
@@ -30,14 +33,14 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
+  $scope.chatsctrlscope = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+  $scope.chatscope = Chats.get($stateParams.chatId);
 })
 
 .controller('AccountCtrl', function($scope) {

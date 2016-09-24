@@ -5,7 +5,7 @@ insta.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var chatsvar = [{
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
@@ -42,15 +42,15 @@ insta.factory('Chats', function() {
 
   return {
     all: function() {
-      return chats;
+      return chatsvar;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+      chatsvar.splice(chatsvar.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < chatsvar.length; i++) {
+        if (chatsvar[i].id === parseInt(chatId)) {
+          return chatsvar[i];
         }
       }
       return null;
@@ -60,7 +60,7 @@ insta.factory('Chats', function() {
 
 
  insta.factory('Posts', function(){
-    var posts = [{
+    var postsvar = [{
       id:0,
       name: "John Doe",
       lastText: 'first post',
@@ -73,12 +73,12 @@ insta.factory('Chats', function() {
     }];
     return {
       all: function(){
-        return posts;
+        return postsvar;
       },
       get:function(postId) {
-        for (var i=0; i < posts.length; i++) {
-          if(posts[i].id === parseInt(postId)){
-            return posts[i];
+        for (var i=0; i < postsvar.length; i++) {
+          if(postsvar[i].id === parseInt(postId)){
+            return postsvar[i];
           }
         }
         return null;
