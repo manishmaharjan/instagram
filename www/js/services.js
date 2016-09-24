@@ -64,6 +64,7 @@ insta.factory('Chats', function() {
       id:0,
       name: "John Doe",
       lastText: 'first post',
+      pic:'img/adam.jpg',
       face: 'img/ben.png'
     },{
       id:1,
