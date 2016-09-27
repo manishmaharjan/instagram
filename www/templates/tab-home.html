@@ -1,18 +1,114 @@
 <ion-view view-title="Home">
-  <ion-content>
-    <h1> This is Instagram Home </h1>
+  <ion-content class="has-header">
+    <h1> Welcome to Instagram </h1>
+   <!--  <md-button class="btn1" ng-click="acceptOffer();"> Accept </md-button> -->
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="posthtml in postsctrlscope" type="item-text-wrap" href="#/tab/home/{{posthtml.idd}}">
+        <img ng-src="{{posthtml.face}}">
+        <h2>{{posthtml.name}}</h2></br>
+     <div class="item item-body">
+      <img style="width: 320px; height: 320px" ng-src="{{posthtml.pic}}"</p>
+       <p>{{posthtml.lastText}}</p>
+                <p> <a href="#" class="subdued">1 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+      </div>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-heart "></i> Like</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i> Comment</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i> Share</a>
+            </div>
+             <ion-row>
+
+       
+        <!-- <i class="icon ion-chevron-right icon-accessory"></i> </br> -->    
+<!--      <ion-icon ios="ios-person" md="md-person">person</ion-icon>
+    <a class="button button-icon icon ion-heart-outline"></a> -->
+<!--         <ion-option-button class="button-assertive" ng-click="remove(post)">
+          Delete
+        </ion-option-button> -->
+      </ion-item>
+
+
+       <div class="list card">
+        
+            <div class="item item-avatar">
+                <img src="img/johncena.jpg">
+          <h2>John Cena</h2>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image" src="img/hotdog.jpg" style="width: 320px; height: 320px">
+                <p>
+                 <a class="tab-item" href="#">
+                    <i class="icon ion-gear"></i> Like</a>
+                    <a href="#" class="subdued">10 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-heart"></i> Like</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i> Comment</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i> Share</a>
+            </div>
+
+        </div>
+
+     <div class="list card">
+        
+            <div class="item item-avatar">
+                <img src="img/DonaldTrumph.jpg">
+                <h2>Donald Trumph</h2>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image" src="img/chicken.jpg" style="width: 320px; height: 320px">
+                <p>
+                    <a href="#" class="subdued">100 Like</a>
+                    <a href="#" class="subdued">5000 Comments</a>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-heart"></i> Like</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i> Comment</a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i> Share</a>
+            </div>
+
+        </div>
+
+
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+
+<!--
+<ion-view view-title="Home">
+  <ion-content class="has-header">
+    <h1> Welcome to Instagram </h1>
+     <md-button class="btn1" ng-click="acceptOffer();"> Accept </md-button> 
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="posthtml in postsctrlscope" type="item-text-wrap" href="#/tab/home/{{posthtml.id}}">
         <img ng-src="{{posthtml.face}}">
         <h2>{{posthtml.name}}</h2></br>
-       <p> <img ng-src="{{posthtml.pic}}"</p>
+       <p> <img style="width: 64px; height: 64px" ng-src="{{posthtml.pic}}"</p>
         <p>{{posthtml.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-      <!--   <ion-option-button class="button-assertive" ng-click="remove(post)">
+         <i class="icon ion-chevron-right icon-accessory"></i> </br> -->    
+<!--      <ion-icon ios="ios-person" md="md-person">person</ion-icon>
+    <a class="button button-icon icon ion-heart-outline"></a> -->
+<!--         <ion-option-button class="button-assertive" ng-click="remove(post)">
           Delete
         </ion-option-button> -->
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+     <!--  </ion-item> -->

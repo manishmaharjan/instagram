@@ -63,14 +63,27 @@ insta.factory('Chats', function() {
     var postsvar = [{
       id:0,
       name: "John Doe",
-      lastText: 'first post',
-      pic:'img/adam.jpg',
+      lastText: 'Beautiful bird sitting behind my window',
+      pic:'img/bird.jpg',
       face: 'img/ben.png'
     },{
       id:1,
-      name: 'Kari Leitonen',
-      lastText:'second post',
-      face:'img/adam.jpg'
+      name: 'Issac Newton',
+      lastText:'A man may imagine things that are false, but he can only understand things that are true. ',
+      face:'img/issacnewton.jpg',
+      pic:'img/issacnewtonpost.jpg'
+    },{
+      id:2,
+      name: 'Steve Jobs',
+      lastText:'My iphone is best',
+      face:'img/stevejobs.jpg',
+      pic:'img/stevejobsiphone.jpg'
+    },{
+      id:3,
+      name: 'Albert Einstein',
+      lastText:'If you cannot explain it simply, you do not understand it well enough',
+      face:'img/alberteinstein.jpg',
+      pic:'img/alberteinsteinpost.jpg'
     }];
     return {
       all: function(){

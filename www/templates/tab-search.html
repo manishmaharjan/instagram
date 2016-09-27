@@ -1,7 +1,15 @@
 <ion-view view-title="Search">
-  <ion-content class="padding">
+<ion-header>
+  <ion-toolbar primary>
+    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
 
-    <h2>Welcome Manish this is search...</h2>
-   
-  </ion-content>
+<ion-content class="padding">
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>
 </ion-view>
